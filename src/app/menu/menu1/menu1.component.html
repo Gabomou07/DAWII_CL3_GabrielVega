@@ -1,0 +1,16 @@
+<div>
+    <label>Almacen Descuento</label>
+    <label for="cantidad">Cantidad:</label>
+    <input type="number" id="cantidad" [(ngModel)]="cantidad" />
+  
+    <label for="precio">Precio:</label>
+    <input type="number" id="precio" [(ngModel)]="precio" />
+  
+    <button (click)="calcularDescuento()">Calcular Descuento</button>
+  
+    <div *ngIf="resultado !== 0">
+      <p>Resultado:</p>
+      <p>{{ resultado | currency:'USD':'symbol':'1.2-2' }}</p>
+    </div>
+  </div>
+  

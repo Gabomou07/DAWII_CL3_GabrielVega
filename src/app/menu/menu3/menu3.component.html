@@ -1,0 +1,15 @@
+<div style="margin-top: 20px;">
+    <h1>Rick y Morty con ID Par</h1>
+    <div style="margin-top: 10px; border: 1px solid #ccc; border-radius: 5px;">
+      <ul style="list-style-type: none; padding: 0;">
+        <li *ngFor="let location of locationsPares" style="border-bottom: 1px solid #ccc; padding: 10px; display: flex; justify-content: space-between; align-items: center;">
+          <div>
+            <h5 style="margin: 0;">{{ location.name }}</h5>
+            <small>ID: {{ location.id }}</small>
+          </div>
+          <span style="background-color: #007BFF; color: #fff; padding: 5px; border-radius: 3px;">ID: {{ location.id }}</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+  

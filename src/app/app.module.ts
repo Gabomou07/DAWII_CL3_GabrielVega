@@ -7,43 +7,42 @@ import { MaterialModule } from './angular-material/material/material.module';
 import { RouterModule } from '@angular/router';
 import { LoginComponent } from './auth/login/login.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { CategoriaListaComponent } from './dashboard/categoria/categoria-lista/categoria-lista.component';
-import { HomeComponent } from './dashboard/home/home.component';
-import { ProductoDetalleComponent } from './dashboard/producto/producto-detalle/producto-detalle.component';
-import { ProductoListaComponent } from './dashboard/producto/producto-lista/producto-lista.component';
-import { CursoListaComponent } from './dashboard/curso/curso-lista/curso-lista.component';
-import { CursoDetalleComponent } from './dashboard/curso/curso-detalle/curso-detalle.component';
+import { MenuComponent } from './menu/menu.component';
+
+import { HomeComponent } from './menu/home/home.component';
+import { Menu1Component } from './menu/menu1/menu1.component';
+import { Menu2Component } from './menu/menu2/menu2.component';
+
+import { Menu3Component } from './menu/menu3/menu3.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     PageNotFoundComponent,
-    DashboardComponent,
-    CategoriaListaComponent,
+    MenuComponent,
     HomeComponent,
-    ProductoDetalleComponent,
-    ProductoListaComponent,
-    CursoListaComponent,
-    CursoDetalleComponent,
- 
+    Menu1Component,
+    Menu2Component,
+    Menu3Component
+    
+
   ],
   imports: [
     BrowserModule,
     FormsModule,
     BrowserAnimationsModule,
     MaterialModule,
+    HttpClientModule,
     RouterModule.forRoot([
       {path : 'login', component:LoginComponent},
-      {path: 'dashboard', component: DashboardComponent,
+      {path: 'Menu', component: MenuComponent,
       children: [
         {path: 'home', component: HomeComponent},
-        {path: 'curso', component: CursoListaComponent},
-        {path: 'curso/:id', component: CursoDetalleComponent},
-        {path: 'producto', component: ProductoListaComponent},
-        {path: 'producto/:id', component: ProductoDetalleComponent},
-        {path: 'categoria', component: CategoriaListaComponent},
+        {path: 'menu1', component: Menu1Component},
+        {path: 'menu2', component: Menu2Component},
+        {path: 'menu3', component: Menu3Component},
       ]      
     },
       {path : '',redirectTo:'login',pathMatch:'full'},

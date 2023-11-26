@@ -12,6 +12,6 @@ export class LoginComponent {
   }
 
   onSubmit():void{
-    this.router.navigate(["dashboard"]);
+    this.router.navigate(["Menu"]);
   }
 }

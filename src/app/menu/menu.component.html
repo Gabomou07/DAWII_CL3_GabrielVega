@@ -1,0 +1,11 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <span>CL3_GabrielVega</span>
+      <span class="example-spacer"></span>
+      <button mat-button (click)="onNavigateToHomePage()">Home</button>
+      <button mat-button (click)="onNavigateToMenu1Page()" >Almacen</button>
+      <button mat-button (click)="onNavigateToMenu2Page()">Empresa-prestamos</button>     
+      <button mat-button (click)="onNavigateToMenu3Page()">API-Rick anda Morty</button>   
+    </mat-toolbar-row>
+</mat-toolbar>
+<router-outlet></router-outlet>

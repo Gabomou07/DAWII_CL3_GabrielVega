@@ -1,0 +1,13 @@
+<div>
+    <label>Empresa de Prestamos</label>
+    <label for="montoPrestamo">Monto del préstamo:</label>
+    <input type="number" id="montoPrestamo" [(ngModel)]="montoPrestamo" />
+  
+    <button (click)="calcularCobro()">Calcular Cobro</button>
+  
+    <div *ngIf="cuotas !== 0">
+      <p>Deberá pagar en {{ cuotas }} cuotas.</p>
+      <p>El monto de cada cuota es: {{ montoCuota | currency:'USD':'symbol':'1.2-2' }}</p>
+    </div>
+  </div>
+  
