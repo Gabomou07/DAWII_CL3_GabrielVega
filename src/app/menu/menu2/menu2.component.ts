@@ -20,11 +20,8 @@ export class Menu2Component {
     } else {
       this.cuotas = 5;
     }
-
     const tasaInteres = this.montoPrestamo < 4000 ? 0.12 : 0.1;
     const totalDeuda = this.montoPrestamo * (1 + tasaInteres);
-
-   
     this.montoCuota = totalDeuda / this.cuotas;
   }
 }
